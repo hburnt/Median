@@ -67,11 +67,27 @@ std::vector<double> findMedian(std::vector<int>& data) {
 	// Please comment out any debugging print outs
 }
 int main() {
-	std::vector<int> data_stream = { 5, 42, 29, 85, 95, 99, 2, 15 };
-	// i-th element of median_stream is median of first i elements of input
-	std::vector<double> median_stream = findMedian(data_stream);
-	for (auto ele : median_stream) {
-		std::cout << ele << " "; // Answer should be: 5 23.5 29 35.5 42 63.5 42 35.5
+	std::vector<int> data_stream1 = { 5, 42, 29, 85, 95, 99, 2, 15 };
+	std::vector<double> median_stream1 = findMedian(data_stream1);
+	for (auto ele : median_stream1) {
+		std::cout << ele << " "; // Answer should be 5 23.5 29 35.5 42 63.5 42 35.5
 	}
 	std::cout << std::endl;
+
+	std::vector<int> data_stream2 = { 10, 20, 30, 40, 50, 60 };
+	std::vector<double> median_stream2 = findMedian(data_stream2);
+	for (auto ele : median_stream2) {
+		std::cout << ele << " "; // Answer should be 10 15 20 25 30 35
+	}
+	std::cout << std::endl;
+
+	std::vector<int> data_stream3 = { 1, 3, 5, 7, 9, 2, 4, 6, 8, 10 };
+	std::vector<double> median_stream3 = findMedian(data_stream3);
+	for (auto ele : median_stream3) {
+		std::cout << ele << " "; // Answer should be 1 2 3 4 5 4 4 4.5 5 5.5
+	}
+	std::cout << std::endl;
+
+	return 0;
 }
+
